@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="foot_tip_link">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00119417475728155 9.48943996844099E-20 -1.38897240469442E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.00345156312874398" />
+      <inertia
+        ixx="1.55434275887049E-07"
+        ixy="-1.7646776450454E-24"
+        ixz="-3.90368160252396E-24"
+        iyy="1.2879747429975E-07"
+        iyz="-6.17628190706261E-24"
+        izz="1.2879747429975E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://foot_tip_link/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.694117647058824 0.0980392156862745 0.0980392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://foot_tip_link/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>
