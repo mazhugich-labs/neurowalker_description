@@ -2,17 +2,17 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <!-- Hip joint properties: displacement and rotation relative to the base frame -->
-    <xacro:property name="hip_1_xyz" value="0.172664 0.092664 0.023" />
+    <xacro:property name="hip_1_xyz" value="0.172664 0.092664 0.0" />
     <xacro:property name="hip_1_rpy" value="0 0 ${pi/4}" />
-    <xacro:property name="hip_2_xyz" value="0.172664 -0.092664 0.023" />
+    <xacro:property name="hip_2_xyz" value="0.172664 -0.092664 0.0" />
     <xacro:property name="hip_2_rpy" value="0 0 ${-pi/4}" />
-    <xacro:property name="hip_3_xyz" value="0 0.12191 0.023" />
+    <xacro:property name="hip_3_xyz" value="0 0.12191 0.0" />
     <xacro:property name="hip_3_rpy" value="0 0 ${pi/2}" />
-    <xacro:property name="hip_4_xyz" value="0 -0.12191 0.023" />
+    <xacro:property name="hip_4_xyz" value="0 -0.12191 0.0" />
     <xacro:property name="hip_4_rpy" value="0 0 ${-pi/2}" />
-    <xacro:property name="hip_5_xyz" value="-0.172664 0.092664 0.023" />
+    <xacro:property name="hip_5_xyz" value="-0.172664 0.092664 0.0" />
     <xacro:property name="hip_5_rpy" value="0 0 ${3*pi/4}" />
-    <xacro:property name="hip_6_xyz" value="-0.172664 -0.092664 0.023" />
+    <xacro:property name="hip_6_xyz" value="-0.172664 -0.092664 0.0" />
     <xacro:property name="hip_6_rpy" value="0 0 ${-3*pi/4}" />
 
     <!-- Femur joint properties: displacement and rotation relative to the hip frame -->

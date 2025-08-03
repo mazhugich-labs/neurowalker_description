@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <xacro:include filename="$(find neurowalker_description)/urdf/macros/link_components.xacro" />
+    <xacro:include filename="link_components.xacro" />
 
-    <link name="dummy_link" />
+    <xacro:if value="${kdl_compatible}">
+        <link name="dummy_link" />
+    </xacro:if>
 
     <xacro:base_link simplify_meshes="${simplify_meshes}" />
 
