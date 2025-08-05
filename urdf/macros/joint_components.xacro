@@ -27,14 +27,14 @@
     <xacro:property name="foot_tip_xyz" value="${0.0515+0.106*cos(-pi/9)} ${0.106*sin(-pi/9)} 0" />
     <xacro:property name="foot_tip_rpy" value="0 0 ${-pi/9}" />
 
-    <!-- Servo limitations -->
-    <xacro:property name="servo_lower" value="${-2*pi/3}" />
-    <xacro:property name="servo_upper" value="${2*pi/3}" />
-    <xacro:property name="servo_velocity" value="5.8178" />
-    <xacro:property name="servo_effort" value="1.9613" />
-    <xacro:macro name="servo_limit">
-        <limit lower="${servo_lower}" upper="${servo_upper}" velocity="${servo_velocity}"
-            effort="${servo_effort}" />
+    <!-- Servo physical limitations -->
+    <xacro:property name="servo_physical_lower" value="${-2*pi/3}" />
+    <xacro:property name="servo_physical_upper" value="${2*pi/3}" />
+    <xacro:property name="servo_physical_velocity" value="5.8178" />
+    <xacro:property name="servo_physical_effort" value="1.9613" />
+    <xacro:macro name="servo_physical_limit">
+        <limit lower="${servo_physical_lower}" upper="${servo_physical_upper}" velocity="${servo_physical_velocity}"
+            effort="${servo_physical_effort}" />
     </xacro:macro>
 
     <!-- Servo dynamics. Some random values right now -->
@@ -68,7 +68,7 @@
                 <origin xyz="${hip_6_xyz}" rpy="${hip_6_rpy}" />
             </xacro:if>
             <axis xyz="0 0 1" />
-            <xacro:servo_limit />
+            <xacro:servo_physical_limit />
             <xacro:if value="${use_joint_dynamics}">
                 <xacro:joint_dynamics />
             </xacro:if>
@@ -82,7 +82,7 @@
             <child link="femur_link${suffix}" />
             <origin xyz="${femur_xyz}" rpy="${femur_rpy}" />
             <axis xyz="0 0 1" />
-            <xacro:servo_limit />
+            <xacro:servo_physical_limit />
             <xacro:if value="${use_joint_dynamics}">
                 <xacro:joint_dynamics />
             </xacro:if>
@@ -96,7 +96,7 @@
             <child link="tibia_link${suffix}" />
             <origin xyz="${tibia_xyz}" rpy="${tibia_rpy}" />
             <axis xyz="0 0 1" />
-            <xacro:servo_limit />
+            <xacro:servo_physical_limit />
             <xacro:if value="${use_joint_dynamics}">
                 <xacro:joint_dynamics />
             </xacro:if>

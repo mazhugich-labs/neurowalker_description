@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <robot name="neurowalker" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <!-- Define whether to generate KDL compatible URDF (Extra dummy link without inertia properties) -->
+    <!-- Choose whether to generate KDL compatible URDF (Extra dummy link without inertia properties) -->
     <xacro:arg name="kdl_compatible" default="false" />
     <xacro:property name="kdl_compatible" value="$(arg kdl_compatible)" />
 
     <!-- Include robot links -->
-    <!-- Define whether to use simplified meshes -->
-    <xacro:arg name="simplify_meshes" default="true" />
+    <!-- Choose whether to use simplified meshes -->
+    <xacro:arg name="simplify_meshes" default="false" />
     <xacro:property name="simplify_meshes" value="$(arg simplify_meshes)" />
     <xacro:include filename="macros/links.xacro" />
 
     <!-- Include robot joints -->
-    <!-- Define whether to use joint dynamics. In this package it doesnt matter -->
+    <!-- Choose whether to add dynamics tag. In this package it doesnt matter -->
     <xacro:arg name="use_joint_dynamics" default="false" />
     <xacro:property name="use_joint_dynamics" value="$(arg use_joint_dynamics)" />
     <xacro:include filename="macros/joints.xacro" />

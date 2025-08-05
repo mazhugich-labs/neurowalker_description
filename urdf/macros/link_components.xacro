@@ -2,10 +2,10 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <!-- Full meshes file path -->
-    <xacro:property name="full_meshes" value="../../meshes/full/stl" />
+    <xacro:property name="full_meshes" value="../meshes/full/stl" />
 
     <!-- Simlpified meshes file path -->
-    <xacro:property name="simplified_meshes" value="../../meshes/simplified/stl" />
+    <xacro:property name="simplified_meshes" value="../meshes/simplified/stl" />
 
     <!-- Link colors. robot_color applies to: base_link, hip_link, femur_link, tibia_link -->
     <xacro:property name="robot_color" value="0.79216 0.81961 0.93333 1" />
