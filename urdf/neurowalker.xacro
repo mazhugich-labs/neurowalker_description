@@ -7,7 +7,7 @@
 
     <!-- Include robot links -->
     <!-- Choose whether to use simplified meshes -->
-    <xacro:arg name="simplify_meshes" default="false" />
+    <xacro:arg name="simplify_meshes" default="true" />
     <xacro:property name="simplify_meshes" value="$(arg simplify_meshes)" />
     <xacro:include filename="macros/links.xacro" />
 
